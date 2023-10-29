@@ -127,14 +127,14 @@
         tri_layer {
             bindings = <
         //╭──────────┬──────────┬──────────┬──────────┬──────────╮   ╭──────────┬──────────┬──────────┬──────────┬──────────╮
-        //│          │          │  EUR     │          │          │   │          │  UE      │          │  OE      │          │
-            &none      &none      &kp EUR    &none      &none          &none      &kp UE     &none      &kp OE     &none
+        //│  RESET   │          │  EUR     │          │          │   │          │  UE      │          │  OE      │  RESET   │
+           &sys_reset  &none      &kp EUR    &none      &none          &none      &kp UE     &none      &kp OE     &sys_reset
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  AE      │  SZ      │          │          │          │   │          │          │          │          │          │
             &kp AE     &kp SZ     &none      &kp LSHFT  &none          &none      &kp LSHFT  &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│          │  BT PRV  │  BT CLR  │  BT NXT  │          │   │          │  BT PRV  │  BT CLR  │  BT NXT  │          │
-            &none     &bt BT_PRV &bt BT_CLR &bt BT_NXT  &none          &none     &bt BT_PRV &bt BT_CLR &bt BT_NXT  &none
+        //│          │  BT PRV  │  BT CLR  │  BT NXT  │          │   │          │          │          │          │          │
+            &none     &bt BT_PRV &bt BT_CLR &bt BT_NXT  &none          &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
                                              &trans     &none          &none      &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯

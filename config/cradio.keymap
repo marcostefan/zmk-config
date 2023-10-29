@@ -29,6 +29,40 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+        combo_lbrc {
+            timeout-ms = <50>;
+            key-positions = <10 11>;
+            bindings = <&kp LBRC>;
+        };
+        combo_lbkt {
+            timeout-ms = <50>;
+            key-positions = <11 12>;
+            bindings = <&kp LBKT>;
+        };
+        combo_lpar {
+            timeout-ms = <50>;
+            key-positions = <12 13>;
+            bindings = <&kp LPAR>;
+        };
+        combo_rpar {
+            timeout-ms = <50>;
+            key-positions = <16 17>;
+            bindings = <&kp RPAR>;
+        };
+        combo_rbkt {
+            timeout-ms = <50>;
+            key-positions = <17 18>;
+            bindings = <&kp RBKT>;
+        };
+        combo_rbrc {
+            timeout-ms = <50>;
+            key-positions = <18 19>;
+            bindings = <&kp RBRC>;
+        };
+    };
+
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {

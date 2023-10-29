@@ -29,40 +29,6 @@
         };
     };
 
-    combos {
-        compatible = "zmk,combos";
-        combo_lbrc {
-            timeout-ms = <50>;
-            key-positions = <10 11>;
-            bindings = <&kp LBRC>;
-        };
-        combo_lbkt {
-            timeout-ms = <50>;
-            key-positions = <11 12>;
-            bindings = <&kp LBKT>;
-        };
-        combo_lpar {
-            timeout-ms = <50>;
-            key-positions = <12 13>;
-            bindings = <&kp LPAR>;
-        };
-        combo_rpar {
-            timeout-ms = <50>;
-            key-positions = <16 17>;
-            bindings = <&kp RPAR>;
-        };
-        combo_rbkt {
-            timeout-ms = <50>;
-            key-positions = <17 18>;
-            bindings = <&kp RBKT>;
-        };
-        combo_rbrc {
-            timeout-ms = <50>;
-            key-positions = <18 19>;
-            bindings = <&kp RBRC>;
-        };
-    };
-
     conditional_layers {
         compatible = "zmk,conditional-layers";
         tri_layer {
@@ -96,13 +62,13 @@
         //│  \|      │  1       │  2       │  3       │  `~      │   │          │          │          │          │          │
             &kp BSLH   &kp N1     &kp N2     &kp N3     &kp GRAVE      &none      &none      &none      &none      &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
-        //│  '"      │  4       │  5       │  6       │  -_      │   │  ESC     │          │          │          │          │
-            &kp SQT    &kp N4     &kp N5     &kp N6     &kp MINUS      &kp ESC    &kp LSHFT  &kp LCTRL  &kp LALT   &none
+        //│  '"      │  4       │  5       │  6       │  -_      │   │          │          │          │          │          │
+            &kp SQT    &kp N4     &kp N5     &kp N6     &kp MINUS      &none      &kp LSHFT  &kp LCTRL  &kp LALT   &none
         //├──────────┼──────────┼──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┼──────────┼──────────┤
         //│  0       │  7       │  8       │  9       │  =+      │   │          │          │          │          │          │
             &kp N0     &kp N7     &kp N8     &kp N9     &kp EQUAL      &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &none          &none      &trans
+                                             &trans     &kp ESC        &none      &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
@@ -119,7 +85,7 @@
         //│          │          │          │          │          │   │          │          │          │          │          │
             &none      &none      &none      &none      &none          &none      &none      &none      &none      &none
         //╰──────────┴──────────┴──────────┼──────────┼──────────┤   ├──────────┼──────────┼──────────┴──────────┴──────────╯
-                                             &trans     &none          &none      &trans
+                                             &trans     &none          &kp DEL    &trans
         //                                 ╰──────────┴──────────╯   ╰──────────┴──────────╯
             >;
         };
